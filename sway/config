@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # Your preferred application launcher (default=wmenu-run)
-set $menu j4-dmenu-desktop
+set $menu j4-dmenu-desktop --dmenu="dmenu -i -fn 'pango:mono' -nb '#19120e' -sf '#19120e' -sb '#f6aead' -nf '#d1d8f3'"
 
 ### Output configuration
 #

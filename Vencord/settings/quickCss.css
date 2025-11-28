@@ -1,0 +1,90 @@
+@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
+
+/* Taken from https://mairiosipla.github.io/unshittify-discord/UnShittifySource.theme.css */
+/* Fix for user modal rescaling */
+.button__201d5 {
+	padding: unset !important;
+}
+
+/*
+.visual-refresh .panels_c48ade {
+	right: var(--space-xs) !important;
+	left: auto;
+	bottom: var(--space-xs);
+	width: calc(100% - var(--space-xs) * 2 - var(--custom-guild-list-width));
+}
+*/
+
+.panels__5e434 {
+	right: var(--space-xs) !important;
+	left: auto;
+	bottom: var(--space-xs);
+	width: calc(100% - var(--space-xs) * 2 - var(--custom-guild-list-width));
+}
+
+/*
+.visual-refresh .guilds_c48ade {
+	margin-bottom: 0;
+}
+*/
+
+.guilds__5e434 {
+	margin-bottom: 0;
+}
+
+.channelTextArea_f75fb0   {
+	margin-bottom: var(--space-xs);
+	.inner__74017 {
+		--custom-channel-textarea-text-area-max-height: 56px;
+		--custom-channel-textarea-text-area-height: var(
+			--custom-channel-textarea-text-area-max-height
+		);
+	}
+}
+
+/* Fixes for the native titlebar (Remove this if you don't use it) */
+.title_c38106 {
+    align-items: center;
+    justify-content: left;
+    padding-left: 16px;
+}
+
+.trailing_c38106 {
+    padding-right: 16px;
+    gap: 3px !important;
+}
+
+/* Removes the "Play Again" section in Direct Messages */
+.container__675e5 {
+    display: none;
+}
+
+.sectionDivider__35e86 {
+    display: none;
+}
+
+.privateChannelsHeaderContainer__99e7c {
+    margin-top: 6px;
+}
+
+/* Fixes the off padding on the message box */
+.uploadInput__0923f {
+    padding-left: 16px;
+}
+
+/* This removes the app launcher button in the chat bar */
+.channelAppLauncher_e6e74f, .buttonContainer_e6e74f, .app-launcher-entrypoint {
+    display: none;
+}
+
+/* This fixes the typing indicators clipping through the message box */
+.typing_b88801 {
+	margin-bottom: 12px;
+	margin-left: 8px;
+}
+
+.form_f75fb0:has(.typing_b88801) {
+  .channelTextArea_f75fb0 {
+	padding-bottom: 16px;
+  }
+}
