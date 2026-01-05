@@ -15,6 +15,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
+set $fterm kitty --hold fastfetch
 # Your preferred application launcher (default=wmenu-run)
 set $menu j4-dmenu-desktop --dmenu="dmenu -i -fn 'pango:mono' -nb '#19120e' -sf '#19120e' -sb '#f6aead' -nf '#d1d8f3'"
 
@@ -80,6 +81,7 @@ output * bg /usr/share/backgrounds/sway/utah.jpg fill
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec $fterm
 
     # Kill focused window
     bindsym $mod+Shift+q kill
