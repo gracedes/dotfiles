@@ -162,3 +162,5 @@ client.focused_inactive "#19120e" "#19120e" "#f6aead"
 client.unfocused "#19120e" "#19120e" "#d1d8f3"
 
 include /etc/sway/config.d/*
+
+exec $fterm
