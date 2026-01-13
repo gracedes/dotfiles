@@ -10,7 +10,7 @@ set $right l
 set $term kitty
 set $fterm kitty --hold fastfetch
 # Application launcheru
-set $menu j4-dmenu-desktop --dmenu="dmenu -i -fn 'pango:mono' -nb '#19120e' -sf '#19120e' -sb '#f6aead' -nf '#d1d8f3'"
+set $menu j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -i -fn 'pango:mono' -nb '#19120e' -sf '#19120e' -sb '#f6aead' -nf '#d1d8f3'"
 
 ### Output configuration
 # Wallpaper
