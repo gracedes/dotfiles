@@ -9,6 +9,7 @@ set $right l
 # Terminal emulator
 set $term kitty
 set $fterm kitty --hold fastfetch
+set $btop kitty --hold btop
 # Application launcheru
 set $menu j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -i -fn 'pango:mono' -nb '#19120e' -sf '#19120e' -sb '#f6aead' -nf '#d1d8f3'"
 
@@ -48,6 +49,7 @@ output * bg /usr/share/backgrounds/sway/utah.jpg fill
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     bindsym $mod+Shift+s exec birdy 
+    bindsym $mod+Shift+b exec $btop
 
 # Moving around:
     bindsym $mod+$left focus left
