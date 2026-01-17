@@ -1,0 +1,157 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-bottom": 1,
+  "spacing" : 0,
+  "modules-left": [
+  "sway/workspaces",
+  "custom/uptime",
+  "cpu",
+  "memory" 
+  ],
+
+  "modules-center": ["clock"],
+
+  "modules-right": [
+    // "bluetooth",
+    "network",
+    "pulseaudio", 
+    "backlight",
+    "battery",
+    // "custom/notifications",
+    "custom/wlogout"
+  ],
+  
+  
+
+  "sway/workspaces": {
+        "on-click": "activate",
+        "disable-scroll": true,
+        "all-outputs": true,
+        "show-special": true,
+        "persistent-workspaces": {
+            "*": [ 1, 2, 3, 4 ],
+        },
+    },
+
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": "{icon}",
+    "format-off": "{icon}", 
+    "format-connected":"{icon}",
+    "format-icons":{
+        "on":"󰂯",
+        "off": "󰂲",
+        "connected": "󰂱",
+        },
+    "on-click": "~/.config/waybar/scripts/bluetooth_off_and_on.sh",
+    "tooltip-format-connected":"{device_enumerate}"
+  },
+
+  "custom/music": {
+    "format": "󰝚   {}",
+    "escape": true,
+    "interval": 5,
+    "tooltip": false,
+    "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+    "on-click": "playerctl play-pause",
+    "max-length": 50
+  },
+
+  "clock": {
+    "timezone": "NorthAmerica/NewYork",
+    "tooltip": false,
+    "format": "{:%I:%M:%S  -  %A, %d}",
+    "interval": 1
+  },
+
+  "network": {
+    "format-wifi": " 󰤢",
+    "format-ethernet": " 󰈀 ",
+    "format-disconnected": " 󰤠 ",
+    "interval": 5,
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "on-click": "nm-connection-editor"
+
+ },
+
+  "cpu": {
+    "interval": 1,
+    "format": " {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "on-click": "kitty -e btop"
+  },
+
+  "memory": {
+    "interval": 1,
+    "format": "  {used:0.1f}/{total:0.1f}G",
+    "on-click": "kitty -e btop",
+    "tooltip-format": "Memory"
+  },
+
+  "custom/uptime": {
+    "format": "{}",
+    "format-icon": [""], 
+    "tooltip": false,
+    "interval": 1600,
+    "exec": "$HOME/.config/waybar/scripts/uptime.sh"
+  },
+  
+  "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["","󰃜", "󰃛", "󰃞","󰃝","󰃟","󰃠"],
+        "tooltip": false
+  },
+  
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "battery": {
+        "interval":2,
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+  },
+  
+  "custom/wlogout": {
+  "tooltip": false,
+  "on-click": "$HOME/.config/rofi/powermenu.sh",
+  "format" : ""
+  },
+
+  "custom/notifications":{
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": " ",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": " ",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": " ",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": " "
+        },
+        "return-type": "json",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+  }
+
+}
