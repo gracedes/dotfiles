@@ -163,15 +163,19 @@ bar {
 
 font pango:mono 14
 
+default_border pixel 2
+default_floating_border pixel 2
+
 gaps inner 5
-gaps top 0
+gaps top -5
 gaps left 5
-gaps right 5
+gaps right 5C
 gaps bottom 5
 
 client.focused "#f6aead" "#f6aead" "#19120e" "#f6aead"
 client.focused_inactive "#19120e" "#19120e" "#f6aead" "#19120e"
 client.unfocused "#19120e" "#19120e" "#d1d8f3" "#19120e"
+
 
 include /etc/sway/config.d/*
 
