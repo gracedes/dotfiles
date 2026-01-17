@@ -11,7 +11,7 @@ set $term kitty
 set $fterm kitty --hold fastfetch
 set $btop kitty --hold btop
 # Application launcheru
-set $menu j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -i -fn 'pango:mono' -nb '#19120e' -sf '#19120e' -sb '#f6aead' -nf '#d1d8f3'"
+set $menu j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -i -b -fn 'FreeMono-15' -nb '#19120e' -sf '#19120e' -sb '#f6aead' -nf '#d1d8f3'"
 
 ### Output configuration
 # Wallpaper
@@ -168,8 +168,8 @@ default_floating_border pixel 2
 
 gaps inner 5
 gaps top -5
-gaps left 5
-gaps right 5C
+gaps left 3
+gaps right 3
 gaps bottom 5
 
 client.focused "#f6aead" "#f6aead" "#19120e" "#f6aead"
