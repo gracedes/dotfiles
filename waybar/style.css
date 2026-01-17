@@ -190,10 +190,10 @@
 #battery {
   color: #99d1db;;
 }
-*/
 #battery.charging {
   color: #adb6f0;
 }
+*/
 #battery.warning:not(.charging) {
   color: #f6aead;
 }
