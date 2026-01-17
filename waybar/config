@@ -131,7 +131,7 @@
   
   "custom/wlogout": {
   "tooltip": false,
-  "on-click": "$HOME/.config/rofi/powermenu.sh",
+  "on-click": "poweroff",
   "format" : ""
   },
 
