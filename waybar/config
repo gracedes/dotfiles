@@ -7,12 +7,13 @@
   "sway/workspaces",
   "custom/uptime",
   "cpu",
-  "memory" 
+  "memory"
   ],
 
   "modules-center": ["clock"],
 
   "modules-right": [
+    "custom/status-squares",
     // "bluetooth",
     "network",
     "pulseaudio", 
@@ -68,7 +69,7 @@
   "network": {
     "format-wifi": " 󰤢",
     "format-ethernet": " 󰈀 ",
-    "format-disconnected": " 󰤠 ",
+    "format-disconnected":" 󰤠 ",
     "interval": 5,
     "tooltip-format": "{essid} ({signalStrength}%)",
     "on-click": "nm-connection-editor"
@@ -91,10 +92,18 @@
 
   "custom/uptime": {
     "format": "{}",
-    "format-icon": [""], 
+    "format-icon": [""],
     "tooltip": false,
-    "interval": 1600,
-    "exec": "$HOME/.config/waybar/scripts/uptime.sh"
+    "interval": 5,
+    "exec": "uptime -p | sed 's/up //'"
+  },
+
+  "custom/status-squares": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/and-on-the-seventh-day-he-commited.sh",
+    "interval": 660,
+    "tooltip": false
   },
   
   "backlight": {

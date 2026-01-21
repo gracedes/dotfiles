@@ -22,8 +22,8 @@
 #custom-uptime,
 #cpu,
 #memory,
-#custom-music{
-  background-color: rgba(25, 18, 13, 0.7);
+#custom-music {
+  background-color: rgba(25, 18, 13, 0.5);
   color: #d1d8f3;
   padding: 0.3rem 0.7rem;
   margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
@@ -56,7 +56,7 @@
 #custom-uptime:hover,
 #cpu:hover,
 #memory:hover {
-  background-color: rgba(25, 18, 13, 0.8); /* Brighter highlight */
+  background-color: rgba(25, 18, 13, 0.6); /* Brighter highlight */
 }
 
 #workspaces button {
@@ -76,12 +76,12 @@
 }
 
 #workspaces button:hover {
-  background-color: rgba(25, 18, 13, 0.8); /* Reference bright hover color */
+  background-color: rgba(25, 18, 13, 0.6); /* Reference bright hover color */
 }
 
 /* --- Center Module (Individual, Fully Rounded Block - With Simple Hover) --- */
 #clock {
-  background-color: rgba(25, 18, 13, 0.7);
+  background-color: rgba(25, 18, 13, 0.5);
   font-family: 'FreeMono, NotoSans Nerd Font', monospace;
   font-size: 20px;
   font-weight: 600;
@@ -98,7 +98,7 @@
 
 /* Simple Hover effect for clock module - BRIGHTER COLOR */
 #clock:hover {
-  background-color: rgba(25, 18, 13, 0.8); /* Brighter highlight */
+  background-color: rgba(25, 18, 13, 0.6); /* Brighter highlight */
 }
 
 /* --- Right Modules (Single, Seamless Bar ) --- */
@@ -108,8 +108,9 @@
 #network,
 #battery,
 #custom-notifications,
-#custom-wlogout{
-  background-color: rgba(25, 18, 13, 0.7);
+#custom-wlogout,
+#custom-status-squares {
+  background-color: rgba(25, 18, 13, 0.5);
   padding: 0.3rem 0.7rem;
   margin: 5px 0px; 
   border-radius: 0;
@@ -125,8 +126,9 @@
 #network:hover,
 #battery:hover,
 #custom-notifications:hover,
-#custom-wlogout:hover {
-  background-color: rgba(25, 18, 13, 0.8);
+#custom-wlogout:hover,
+#custom-status-squares:hover {
+  background-color: rgba(25, 18, 13, 0.6);
 }
 
 #network { 
@@ -139,10 +141,11 @@
   border-bottom-right-radius: 6px;
 }
 
-/*
+
 #custom-uptime {
-  color: #babbf1;
+  color: #d1d8f3;
 }
+/*
 #cpu {
   color: #c6d0f5;
 }
@@ -200,7 +203,7 @@
 
 /* --- Tooltip Styles --- */
 tooltip {
-  background-color: rgba(25, 18, 13, 0.8);
+  background-color: rgba(25, 18, 13, 0.6);
   color: #d1d8f3;
   padding: 5px 12px;
   margin: 5px 0px;
@@ -213,8 +216,15 @@ tooltip {
 	border-radius: 6px;
 	margin-left: 5px;
 }
-#custom-wlogout{
+#custom-wlogout {
 	border-radius: 6px;
 	margin-right: 7px;
+	margin-left: 5px;
+}
+
+#custom-status-squares {
+  font-family: 'NotoSans', sans-serif;
+	border-radius: 6px;
+	margin-right: 5px;
 	margin-left: 5px;
 }
