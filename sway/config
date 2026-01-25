@@ -179,4 +179,5 @@ client.unfocused "#19120e" "#19120e" "#d1d8f3" "#19120e"
 
 include /etc/sway/config.d/*
 
+exec_always --no-startup-id swaync
 exec $fterm

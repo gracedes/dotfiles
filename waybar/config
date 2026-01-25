@@ -19,7 +19,7 @@
     "pulseaudio", 
     "backlight",
     "battery",
-    // "custom/notifications",
+    "custom/notifications",
     "custom/wlogout"
   ],
   
@@ -78,7 +78,7 @@
 
   "cpu": {
     "interval": 1,
-    "format": " {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
+    "format": " {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7} {usage:>2}%",
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
     "on-click": "kitty -e btop"
   },
@@ -103,7 +103,8 @@
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/and-on-the-seventh-day-he-commited.sh",
     "interval": 660,
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "firefox https://github.com/gracedes"
   },
   
   "backlight": {
@@ -134,7 +135,7 @@
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        // "format-full": "",C
         "format-icons": ["", "", "", "", ""]
   },
   
@@ -147,19 +148,20 @@
   "custom/notifications":{
         "format": "{icon}",
         "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span>",
-            "none": " ",
-            "dnd-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-none": " ",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "inhibited-none": " ",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-inhibited-none": " "
+            "notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "dnd-inhibited-none": ""
         },
         "return-type": "json",
+        "exec-if": "which swaync-client",
         "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
         "escape": true
   }
 
