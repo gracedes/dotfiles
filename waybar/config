@@ -63,7 +63,8 @@
     "timezone": "NorthAmerica/NewYork",
     "tooltip": false,
     "format": "{:%I:%M:%S  -  %A, %d}",
-    "interval": 1
+    "interval": 1,
+    "on-click": "firefox https://calendar.google.com/calendar/u/0/r"
   },
 
   "network": {
