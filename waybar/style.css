@@ -197,7 +197,8 @@
   color: #adb6f0;
 }
 */
-#battery.warning:not(.charging) {
+#battery.warning:not(.charging), 
+#battery.critical:not(.charging) {
   color: #f6aead;
 }
 
