@@ -23,7 +23,7 @@
 #cpu,
 #memory,
 #custom-music {
-  background-color: rgba(9, 14.1, 21.2, 0.5);
+  background-color: rgba(9, 14.1, 21.2, 0.1);
   color: #fdfdfd;
   padding: 0.3rem 1rem;
   margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
@@ -56,7 +56,7 @@
 #custom-uptime:hover,
 #cpu:hover,
 #memory:hover {
-  background-color: rgba(9, 14.1, 21.2, 0.6); /* Brighter highlight */
+  background-color: rgba(9, 14.1, 21.2, 0.2); /* Brighter highlight */
 }
 
 #workspaces button {
@@ -78,7 +78,7 @@
 
 /*
 #workspaces button:hover {
-  background-color: rgba(9, 14.1, 21.2, 0.6);
+  background-color: rgba(9, 14.1, 21.2, 0.2);
   outline: none;
   border: none;
 } 
@@ -86,7 +86,7 @@
 
 /* --- Center Module (Individual, Fully Rounded Block - With Simple Hover) --- */
 #clock {
-  background-color: rgba(9, 14.1, 21.2, 0.5);
+  background-color: rgba(9, 14.1, 21.2, 0.1);
   font-family: 'FreeMono, NotoSans Nerd Font', monospace;
   font-size: 20px;
   font-weight: 600;
@@ -103,7 +103,7 @@
 
 /* Simple Hover effect for clock module - BRIGHTER COLOR */
 #clock:hover {
-  background-color: rgba(9, 14.1, 21.2, 0.6); /* Brighter highlight */
+  background-color: rgba(9, 14.1, 21.2, 0.2); /* Brighter highlight */
 }
 
 /* --- Right Modules (Single, Seamless Bar ) --- */
@@ -115,7 +115,7 @@
 #custom-notifications,
 #custom-wlogout,
 #custom-status-squares {
-  background-color: rgba(9, 14.1, 21.2, 0.5);
+  background-color: rgba(9, 14.1, 21.2, 0.1);
   padding: 0.3rem 0.7rem;
   margin: 5px 0px; 
   border-radius: 0;
@@ -133,7 +133,7 @@
 #custom-notifications:hover,
 #custom-wlogout:hover,
 #custom-status-squares:hover {
-  background-color: rgba(9, 14.1, 21.2, 0.6);
+  background-color: rgba(9, 14.1, 21.2, 0.2);
 }
 
 #network { 
@@ -211,7 +211,7 @@
 
 /* --- Tooltip Styles --- */
 tooltip {
-  background-color: rgba(9, 14.1, 21.2, 0.6);
+  background-color: rgba(9, 14.1, 21.2, 0.2);
   color: #fdfdfd;
   padding: 5px 12px;
   margin: 5px 0px;

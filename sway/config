@@ -176,6 +176,18 @@ client.focused "#facedc" "#facedc" "#172436" "#facedc"
 client.focused_inactive "#172436" "#172436" "#facedc" "#172436"
 client.unfocused "#172436" "#172436" "#fdfdfd" "#172436"
 
+# swayfx stuff:
+blur enable
+blur_xray disable
+blur_passes 2
+corner_radius 20
+smart_corner_radius false
+
+layer_effects "waybar" {
+    blur enable;
+    blur_xray enable;
+    blur_ignore_transparent enable;
+}
 
 include /etc/sway/config.d/*
 
