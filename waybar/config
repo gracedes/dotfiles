@@ -5,22 +5,22 @@
   "spacing" : 0,
   "modules-left": [
   "sway/workspaces",
-  "custom/uptime",
-  "cpu",
-  "memory"
+  // "custom/uptime",
+  "cpu"
+  // "memory"
   ],
 
   "modules-center": ["clock"],
 
   "modules-right": [
-    "custom/status-squares",
+    // "custom/status-squares",
     // "bluetooth",
     "network",
     "pulseaudio", 
     "backlight",
-    "battery",
-    "custom/notifications",
-    "custom/wlogout"
+    "battery"
+    // "custom/notifications",
+    // "custom/wlogout"
   ],
 
   "sway/workspaces": {
@@ -60,7 +60,7 @@
   "clock": {
     "timezone": "NorthAmerica/NewYork",
     "tooltip": false,
-    "format": "{:%I:%M:%S  -  %A, %d}",
+    "format": "{:%I:%M:%S %A %d}",
     "interval": 1,
     "on-click": "firefox https://calendar.google.com/calendar/u/0/r"
   },
@@ -147,13 +147,13 @@
   "custom/notifications":{
         "format": "{icon}",
         "format-icons": {
-            "notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "notification": "<span foreground='#facedc'><sup></sup></span>",
             "none": "",
-            "dnd-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "dnd-notification": "<span foreground='#facedc'><sup></sup></span>",
             "dnd-none": "",
-            "inhibited-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "inhibited-notification": "<span foreground='#facedc'><sup></sup></span>",
             "inhibited-none": "",
-            "dnd-inhibited-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "dnd-inhibited-notification": "<span foreground='#facedc'><sup></sup></span>",
             "dnd-inhibited-none": ""
         },
         "return-type": "json",
