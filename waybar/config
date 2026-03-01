@@ -22,8 +22,6 @@
     "custom/notifications",
     "custom/wlogout"
   ],
-  
-  
 
   "sway/workspaces": {
         "on-click": "activate",
