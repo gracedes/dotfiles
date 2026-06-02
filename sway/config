@@ -15,7 +15,7 @@ set $menu j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') 
 
 ### Output configuration
 # Wallpaper
-output * bg /usr/share/backgrounds/kaguya.png fill
+output * bg /home/grace/images/backgrounds/kaguya2c.jpg fill
 
     output eDP-1 {
        mode 2880x1920@120.000Hz scale 1
@@ -192,4 +192,4 @@ layer_effects "waybar" {
 include /etc/sway/config.d/*
 
 # exec_always --no-startup-id swaync
-# exec $fterm
+exec $fterm

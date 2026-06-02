@@ -1,21 +1,23 @@
 {
   "layer": "top",
   "position": "top",
+  "output": "!DP-1",
   "margin-bottom": 1,
   "spacing" : 0,
   "modules-left": [
   "sway/workspaces",
   // "custom/uptime",
-  "cpu"
-  // "memory"
+  "cpu",
+  "memory"
   ],
 
   "modules-center": ["clock"],
 
   "modules-right": [
-    // "custom/status-squares",
+    "custom/status-squares",
     // "bluetooth",
     "network",
+    // "custom/airpods",
     "pulseaudio", 
     "backlight",
     "battery"
@@ -84,7 +86,7 @@
 
   "memory": {
     "interval": 1,
-    "format": "  {used:0.1f}/{total:0.1f}G",
+    "format": " {percentage:>2}%",
     "on-click": "kitty -e btop",
     "tooltip-format": "Memory"
   },
@@ -119,6 +121,15 @@
       "default": ["", "", " "]
     },
     "on-click": "pavucontrol"
+  },
+
+  "custom/airpods": {
+    "format": ".{}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/bluetooth-actions.sh --status 14:85:09:EE:D5:4C",
+    "interval": 660,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/bluetooth-actions.sh --status 14:85:09:EE:D5:4C"
   },
 
   "battery": {
