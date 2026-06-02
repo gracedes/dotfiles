@@ -2,11 +2,11 @@
 
 SQUARE="■"
 # colors for "gradient", green1 is the darkest green4 is the lightest
-GREEN1="#f6aead4d"
-GREEN2="#f6aead80"
-GREEN3="#f6aeadb3"
-GREEN4="#f6aeade6"
-BLACK="#f6aead1a"
+GREEN1="#facedc4d"
+GREEN2="#facedc80"
+GREEN3="#facedcb3"
+GREEN4="#facedce6"
+BLACK="#facedc1a"
 
 # get dates
 FROM_DATE=$(date -d '6 days ago' +"%Y-%m-%dT%H:%M:%SZ")

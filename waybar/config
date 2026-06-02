@@ -1,11 +1,12 @@
 {
   "layer": "top",
   "position": "top",
+  "output": "!DP-1",
   "margin-bottom": 1,
   "spacing" : 0,
   "modules-left": [
   "sway/workspaces",
-  "custom/uptime",
+  // "custom/uptime",
   "cpu",
   "memory"
   ],
@@ -16,14 +17,13 @@
     "custom/status-squares",
     // "bluetooth",
     "network",
+    // "custom/airpods",
     "pulseaudio", 
     "backlight",
-    "battery",
-    "custom/notifications",
-    "custom/wlogout"
+    "battery"
+    // "custom/notifications",
+    // "custom/wlogout"
   ],
-  
-  
 
   "sway/workspaces": {
         "on-click": "activate",
@@ -62,8 +62,9 @@
   "clock": {
     "timezone": "NorthAmerica/NewYork",
     "tooltip": false,
-    "format": "{:%I:%M:%S  -  %A, %d}",
-    "interval": 1
+    "format": "{:%I:%M:%S %A %d}",
+    "interval": 1,
+    "on-click": "firefox https://calendar.google.com/calendar/u/0/r"
   },
 
   "network": {
@@ -85,7 +86,7 @@
 
   "memory": {
     "interval": 1,
-    "format": "  {used:0.1f}/{total:0.1f}G",
+    "format": " {percentage:>2}%",
     "on-click": "kitty -e btop",
     "tooltip-format": "Memory"
   },
@@ -122,6 +123,15 @@
     "on-click": "pavucontrol"
   },
 
+  "custom/airpods": {
+    "format": ".{}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/bluetooth-actions.sh --status 14:85:09:EE:D5:4C",
+    "interval": 660,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/bluetooth-actions.sh --status 14:85:09:EE:D5:4C"
+  },
+
   "battery": {
         "interval":2,
         "states": {
@@ -148,13 +158,13 @@
   "custom/notifications":{
         "format": "{icon}",
         "format-icons": {
-            "notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "notification": "<span foreground='#facedc'><sup></sup></span>",
             "none": "",
-            "dnd-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "dnd-notification": "<span foreground='#facedc'><sup></sup></span>",
             "dnd-none": "",
-            "inhibited-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "inhibited-notification": "<span foreground='#facedc'><sup></sup></span>",
             "inhibited-none": "",
-            "dnd-inhibited-notification": "<span foreground='#f6aead'><sup></sup></span>",
+            "dnd-inhibited-notification": "<span foreground='#facedc'><sup></sup></span>",
             "dnd-inhibited-none": ""
         },
         "return-type": "json",
