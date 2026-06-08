@@ -34,3 +34,7 @@ vencord
 mimeapps.list
 pavucontrol.ini
 QtProject.conf
+ibus
+mozc
+fcitx*
+astro

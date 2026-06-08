@@ -236,7 +236,6 @@ tooltip {
 
 #custom-status-squares {
   font-family: 'NotoSans', sans-serif;
-	border-radius: 6px;
-	margin-right: 5px;
-	margin-left: 5px;
+	border-radius: 50px;
+	margin-right: 10px;
 }
