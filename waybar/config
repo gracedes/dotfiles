@@ -100,7 +100,7 @@
   },
 
   "custom/status-squares": {
-    "format": "{}",
+    "format": " {} ",
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/and-on-the-seventh-day-he-commited.sh",
     "interval": 660,
