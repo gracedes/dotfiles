@@ -7,15 +7,16 @@
   "modules-left": [
   "sway/workspaces",
   // "custom/uptime",
-  "cpu",
-  "memory"
+  "cpu"
+  // "memory"
   ],
 
   "modules-center": ["clock"],
 
   "modules-right": [
-    "custom/status-squares",
+    // "custom/status-squares",
     // "bluetooth",
+    "memory",
     "network",
     // "custom/airpods",
     "pulseaudio", 
