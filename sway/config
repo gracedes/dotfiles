@@ -30,6 +30,9 @@ output * bg /home/grace/images/backgrounds/kaguya2c.jpg fill
 	  scroll_method two_finger
 	  scroll_factor 0.3
     }
+#    input type:keyboard {
+#	  xkb_options h:none
+#    }
 
 ### Key bindings
 # Basics:
