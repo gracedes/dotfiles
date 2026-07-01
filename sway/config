@@ -11,11 +11,11 @@ set $term kitty
 set $fterm kitty --hold fastfetch
 set $btop kitty --hold btop
 # Application launcheru
-set $menu j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -i -b -fn 'FreeMono-15' -nb '#172436' -sf '#172436' -sb '#facedc' -nf '#fdfdfd'"
+set $menu j4-dmenu-desktop --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -i -b -fn 'FreeMono-15' -nb '#ededed' -sf '#ffffff' -sb '#4db8fe' -nf '#000000'"
 
 ### Output configuration
 # Wallpaper
-output * bg /home/grace/images/backgrounds/kaguya2c.jpg fill
+output * bg /home/grace/images/backgrounds/tv.jpg fill
 
     output eDP-1 {
        mode 2880x1920@120.000Hz scale 1
@@ -175,9 +175,9 @@ gaps left 3
 gaps right 3
 gaps bottom 5
 
-client.focused "#facedc" "#facedc" "#172436" "#facedc"
-client.focused_inactive "#172436" "#172436" "#facedc" "#172436"
-client.unfocused "#172436" "#172436" "#fdfdfd" "#172436"
+client.focused "#4db8fe" "#4db8fe" "#ffffff" "#4db8fe"
+client.focused_inactive "#ededed" "#ededed" "#000000" "#ededed"
+client.unfocused "#ffffff" "#ffffff" "#000000" "#ffffff"
 
 # swayfx stuff:
 blur enable

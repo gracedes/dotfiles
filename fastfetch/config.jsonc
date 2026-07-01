@@ -2,8 +2,8 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "logo": {
     "type": "kitty",
-    "source": "/home/grace/images/kaguya-icon.png",
-    "height": 20,
+    "source": "/home/grace/images/arch2.png",
+    "height": 17,
     "padding": {
       "top": 1,
       "left": 3
@@ -76,8 +76,6 @@
       "key": "Battery",
       "format": "{capacity-bar} {status}"
     },
-    "break",
-    "colors",
     "break"
   ]
 }
